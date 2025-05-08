@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>ThreeIn - Notes, Todos, and Chat</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <div class="app-title">ThreeIn</div>
+      <nav>
+        <button id="notes-btn" class="nav-btn active">Notes</button>
+        <button id="todos-btn" class="nav-btn">To-Dos</button>
+        <button id="chat-btn" class="nav-btn">Chat</button>
+      </nav>
+    </div>
+    
+    <div class="content">
+      <!-- Notes Panel -->
+      <div id="notes-panel" class="panel active">
+        <div class="panel-header">
+          <h2>Notes</h2>
+          <button id="new-note-btn">New Note</button>
+        </div>
+        <div class="panel-content">
+          <div class="notes-list" id="notes-list"></div>
+          <div class="note-editor">
+            <input type="text" id="note-title" placeholder="Title">
+            <textarea id="note-content" placeholder="Write your note here..."></textarea>
+            <div class="editor-actions">
+              <button id="save-note-btn">Save</button>
+              <button id="delete-note-btn">Delete</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Todos Panel -->
+      <div id="todos-panel" class="panel">
+        <div class="panel-header">
+          <h2>To-Do List</h2>
+        </div>
+        <div class="panel-content">
+          <div class="todo-input">
+            <input type="text" id="todo-input" placeholder="Add a new task...">
+            <button id="add-todo-btn">Add</button>
+          </div>
+          <div class="todos-list" id="todos-list"></div>
+        </div>
+      </div>
+      
+      <!-- Chat Panel -->
+      <div id="chat-panel" class="panel">
+        <div class="panel-header">
+          <h2>Chat with Claude</h2>
+        </div>
+        <div class="panel-content">
+          <div class="chat-messages" id="chat-messages"></div>
+          <div class="chat-input">
+            <textarea id="chat-input" placeholder="Type your message..."></textarea>
+            <button id="send-message-btn">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="renderer.js"></script>
+</body>
+</html>

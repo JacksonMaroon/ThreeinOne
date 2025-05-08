@@ -1,0 +1,38 @@
+{
+  "name": "threein",
+  "version": "1.0.0",
+  "description": "Three-in-one app with notes, to-do list, and chatbot functionality",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "NODE_ENV=development electron .",
+    "build": "electron-builder",
+    "build:mac": "electron-builder --mac"
+  },
+  "build": {
+    "appId": "com.threein.app",
+    "productName": "ThreeIn",
+    "mac": {
+      "category": "public.app-category.productivity"
+    }
+  },
+  "keywords": [
+    "electron",
+    "notes",
+    "todo",
+    "chatbot",
+    "claude"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.4.3",
+    "dotenv": "^16.5.0",
+    "electron-store": "^8.1.0",
+    "node-fetch": "^2.7.0"
+  },
+  "devDependencies": {
+    "electron": "^24.0.0",
+    "electron-builder": "^24.0.0"
+  }
+}
